@@ -22,7 +22,7 @@ export function Crew() {
                         <ul className="nav_items">
                             {
                                 crew.map( (item, index) => (
-                                    <li className="nav_item" key={index}>
+                                    <li className="nav_item" key={item.name}>
                                         <button
                                             onClick={ () => setValue(index) }
                                         >
