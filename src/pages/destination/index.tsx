@@ -44,8 +44,9 @@ export function Destination() {
           <h3 className={ style['text-present-6'] }><span className="number">01</span> Pick your destination</h3>
           <div className="img-planet">
             <img
-                src={images.png}
-                alt={name} />
+              src={images.webp}
+              alt={name} 
+            />
           </div>
         </div>
         <div className="description">
