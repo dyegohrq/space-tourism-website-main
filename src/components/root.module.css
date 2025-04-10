@@ -1,0 +1,151 @@
+:root{
+    /* Colors */
+    --blue-900: hsl(230, 35%, 7%);
+    --blue-300: #d0d6f9;
+    --white: #fff;
+
+    --font-bellefair: "Bellefair", serif;
+    --font-barlow: "Barlow", sans-serif;
+    --font-barlow-condensed: "Barlow Condensed", sans-serif;
+
+    --font-regular: 400;
+
+    --padding-mobile: 24px;
+    --padding-tablet: 48px;
+    --padding-descktop: 96px;
+}
+
+/* Typography mobile */
+.text-present-1 {
+    font-family: var(--font-bellefair);
+    font-weight: var(--font-regular);
+    font-size: 80px;
+    line-height: auto;
+    letter-spacing: 0;
+}
+
+.text-present-2 {
+    font-family: var(--font-bellefair);
+    font-weight: var(--font-regular);
+    font-size: 56px;
+    line-height: auto;
+    letter-spacing: 0;
+}
+
+.text-present-3 {
+    font-family: var(--font-bellefair);
+    font-weight: var(--font-regular);
+    font-size: 24px;
+    line-height: auto;
+    letter-spacing: 0;
+}
+
+.text-present-4 {
+    font-family: var(--font-bellefair);
+    font-weight: var(--font-regular);
+    font-size: 18px;
+    line-height: auto;
+    letter-spacing: 0;
+}
+
+.text-present-5 {
+    font-family: var(--font-barlow-condensed);
+    font-size: 20px;
+    font-weight: var(--font-regular);
+    line-height: auto;
+    letter-spacing: 15%;
+}
+
+.text-present-6 {
+    font-family: var(--font-barlow-condensed);
+    font-weight: var(--font-regular);
+    font-size: 16px;
+    line-height: auto;
+    letter-spacing: 15%;
+}
+
+.text-present-7 {
+    font-family: var(--font-barlow-condensed);
+    font-weight: var(--font-regular);
+    font-size: 14px;
+    line-height: auto;
+    letter-spacing: 2px;
+}
+
+.text-present-8,
+.text-present-8-bold {
+    font-family: var(--font-barlow-condensed);
+    font-weight: var(--font-regular);
+    font-size: 14px;
+    line-height: auto;
+    letter-spacing: 15%;
+}
+
+.text-present-8-bold {
+    font-weight: bold;
+    font-size: 16px;
+    letter-spacing: 2.7px;
+}
+
+.text-present-9 {
+    font-family: var(--font-barlow);
+    font-weight: var(--font-regular);
+    font-size: 15px;
+    line-height: 180%;
+    letter-spacing: 0px;
+}
+
+@media screen and (min-width: 768px) {
+    .text-present-1{
+        font-size: 144px;
+    }
+
+    .text-present-2 {
+        font-size: 80px;
+    }
+
+    .text-present-3{
+        font-size: 40px;
+    }
+
+    .text-present-4{
+        font-size: 24px;
+    }
+
+    .text-present-5 {
+        font-size: 28px;
+        letter-spacing: 4px;
+    }
+
+    .text-present-6{
+        font-size: 28px;
+    }
+
+    .text-present-8{
+        font-size: 16px;
+        letter-spacing: 2px;
+    }
+
+    .text-present-9 {
+        font-size: 16px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+
+    .text-present-2 {
+        font-size: 96px;
+    }
+
+    .text-present-3 {
+        font-size: 56px;
+    }
+
+    .text-present-4{
+        font-size: 32px;
+    }
+
+    .text-present-9 {
+        font-size: 18px;
+    }
+}

@@ -1,0 +1,211 @@
+@import '../root.module.css';
+
+header {
+    position: absolute;
+    width: 100%;
+    height: 100px;
+
+    .navbar {
+        position: relative;
+        width: auto;
+        display: flex;
+        justify-content: space-between;
+        padding: var(--padding-mobile);
+    
+        .mobile {
+    
+            .burger {
+                width: 24px;
+                height: 24px;
+                background-color: transparent;
+                border: none;
+                cursor: pointer;
+    
+                .hambuguer {
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 6px;
+                
+                    .bar {
+                        width: 100%;
+                        height: 4px;
+                        background-color: var(--blue-300);
+                    }
+                }
+            }
+    
+            .nav_items {
+                display: flex;
+                flex-direction: column;
+                gap: 32px;
+                position: absolute;
+                right: 0;
+                top: 0;
+                background: hsla(230, 33%, 7%, 0.15);
+                backdrop-filter: blur(10px);
+                width: 0;
+                height: 100vh;
+                padding: 150px 0 0 32px;
+                overflow: hidden;
+                opacity: 0;
+                transition: all ease-in-out .5s;
+    
+                .nav_link {
+                    &.active,
+                    &:hover {
+                        border-right: 3px solid var(--blue-300);
+                    }
+                }
+    
+                a {
+                    color: var(--white);
+                    display: flex;
+                    align-items: center;
+                    gap: 12px;
+    
+                    .namePage {
+                        text-transform: uppercase;
+                    }
+                }
+            }
+        }
+    
+        .active {
+            .burger {
+                position: relative;
+                z-index: 999;
+    
+                .hambuguer{
+                    #bar1 {
+                        transform: rotate(45deg);
+                        position: absolute;
+                        top: 40%;
+                    }
+    
+                    #bar2 {
+                        background: transparent;
+                    }
+    
+                    #bar3 {
+                        transform: rotate(-45deg);
+                        position: absolute;
+                        top: 40%;
+                    }
+                }
+            }
+    
+            .nav_items{
+                width: 50%;
+                overflow: auto;
+                opacity: 1;
+            }
+        }
+    
+        .line {
+            display: none;
+        }
+    
+        .descktop {
+            display: none;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    header {
+        .navbar{
+            padding: 0;
+            align-items: flex-start;
+            height: 80px;
+    
+            .logo {
+                width: 10%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+    
+            .mobile {
+                display: none;
+            }
+    
+            .nav_items {
+                padding-left: var(--padding-tablet);
+    
+                .nav_link {
+                    height: 100%;
+                    padding-bottom: 8px;
+    
+                    &.active {
+                        .numberPage {
+                            display: none;
+                        }
+                    }
+    
+                    &.active,
+                    &:hover {
+                        border-right: none;
+                        border-bottom: 3px solid var(--blue-300);
+                    }
+                }
+    
+                a {
+                    text-transform: uppercase;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 12px;
+                    color: var(--white);
+                }
+    
+                &.descktop{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-around;
+                    width: 90%;
+                    height: 100%;
+                    background: rgb(255, 255, 255, 5%);
+                    gap: 48px;
+                }
+            }
+    
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    header {
+        .navbar {
+            margin: 40px 0 0 64px;
+            align-items: center;
+    
+            .line {
+                display: block;
+                width: 28%;
+                height: 1px;
+                background-color: var(--white);
+                opacity: 0.25;
+                position: absolute;
+                left: 13%;
+            }
+    
+            .nav_items {
+                .nav_link {
+                    &.active {
+                        .numberPage {
+                            display: block;
+                        }
+                    }
+                }
+    
+                &.descktop {
+                    width: 65%;
+                    padding-left: 50px;
+                }
+            }
+        }
+    }
+}
