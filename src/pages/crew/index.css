@@ -1,0 +1,17 @@
+#crew {
+    background: url(../../assets/crew/background-crew-mobile.jpg) no-repeat center / cover;
+    padding: 140px var(--padding-mobile) 0 var(--padding-mobile);
+
+    .description {
+        h3 {
+            color: var(--white);
+            text-transform: uppercase;
+            margin-bottom: 24px;
+    
+            .number {
+                font-weight: bold;
+                margin-right: 24px;
+            }
+        }
+    }
+}

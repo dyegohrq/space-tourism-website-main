@@ -39,7 +39,7 @@ export function Destination() {
   } )
 
   return (
-    <main>
+    <main id="destination">
         <div className="planet_destination">
           <h3 className={ style['text-present-6'] }><span className="number">01</span> Pick your destination</h3>
           <div className="img-planet">
