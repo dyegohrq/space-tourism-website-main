@@ -21,7 +21,7 @@ export function Technology() {
                                 technology.map( (item, index) => (
                                     <li className="nav_item" key={item.name} >
                                         <button 
-                                            onClick={ (e) => setValue(index) }
+                                            onClick={ () => setValue(index) }
                                         >
                                             {index + 1}
                                         </button>
