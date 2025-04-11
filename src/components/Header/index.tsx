@@ -1,5 +1,5 @@
 import { Link, useLocation } from "react-router";
-import  LogoImg  from '../../assets/shared/logo.svg'
+import  LogoImg  from '../../../public/assets/shared/logo.svg'
 import './index.css'
 import NavItem, { NavItemProps } from "../NavItem";
 
