@@ -1,4 +1,174 @@
 #technology {
-    padding: 140px var(--padding-mobile) 0 var(--padding-mobile);
     width: 100%;
+    height: 100vh;
+    background: url(/assets/technology/background-technology-mobile.jpg) no-repeat center / cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    .main_content{
+        h3 {
+            color: var(--white);
+            text-transform: uppercase;
+            margin-bottom: 24px;
+    
+            .number {
+                font-weight: bold;
+                margin-right: 24px;
+                color: var(--gray-300);
+            }
+        }
+
+        .technology_description {
+            display: flex;
+            flex-direction: column;
+
+            .img_technology img{
+                width: 100%;
+                max-width: 768px;
+                height: 258px;
+                margin-top: 88px;
+            }
+
+            .description {
+                .nav_items {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin: 40px 0;
+                    gap: 16px;
+
+                    .nav_item {
+                        button {
+                            width: 40px;
+                            height: 40px;
+                            border-radius: 50%;
+                            border: 1px solid var(--white);
+                            color: var(--white);
+                            background: transparent;
+                            cursor: pointer;
+                            transition: all ease-in-out .3s;
+
+                            &.active,
+                            &:hover {
+                                background: var(--white);
+                                color: var(--blue-900);
+                            }
+                        }
+                    }
+
+                }
+                .text {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+
+                    .subtitle {
+                        color: var(--gray-300);
+                        margin-bottom: 18px;
+                    }
+
+                    h1 {
+                        color: var(--white);
+                        text-transform: uppercase;
+                        margin-bottom: 16px;
+                    }
+
+                    p {
+                        max-width: 90%;
+                        color: var(--blue-300);
+                    }
+                }
+                
+            }
+
+            
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    #technology{
+        text-align: left;
+        background: url(/assets/technology/background-technology-tablet.jpg) no-repeat center / cover;
+
+        .main_content {
+            margin-top: 100px;
+
+            .technology_description {
+
+                .img_technology img{
+                    max-width: 100%;
+                    height: 357px;
+                    margin-top: 60px;
+                }
+
+                .description {
+                    .text{
+                        p {
+                           text-align: center;
+                           
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    #technology{
+        background: url(/assets/technology/background-technology-desktop.jpg) no-repeat center / cover;
+
+        .main_content {
+            .title {
+                margin-left: 20%;
+            }
+
+            .technology_description {
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+
+                .img_technology {
+                    order: 2;
+
+                    img {
+                        max-width: 608px;
+                        height: 600px;
+                    }
+                }
+
+                .description {
+                    max-width: 50%;
+                    display: flex;
+                    gap: 64px;
+                    margin-left: 20%;
+                    align-items: center;
+
+                    .nav_items {
+                        flex-direction: column;
+                        gap: 32px;
+
+                        .nav_item {
+                            button {
+                                width: 80px;
+                                height: 80px;
+                            }
+                        }
+                    }
+
+                    .text {
+                        align-items: flex-start;
+
+                        p {
+                            text-align: left;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

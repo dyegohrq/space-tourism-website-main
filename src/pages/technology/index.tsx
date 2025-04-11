@@ -13,8 +13,11 @@ export function Technology() {
     return (
         <main id="technology">
             <div className="main_content">
-                <h3 className={ style['text-present-6'] }><span className="number">01</span> Pick your destination</h3>
+                <h3 className={` ${ style['text-present-6']} title ` }><span className="number">03</span>space lounch 101</h3>
                 <div className="technology_description">
+                    <div className="img_technology">
+                        <img src={images.portrait} alt={name} />
+                    </div>
                     <div className="description">
                         <ul className="nav_items">
                             {
@@ -22,6 +25,7 @@ export function Technology() {
                                     <li className="nav_item" key={item.name} >
                                         <button 
                                             onClick={ () => setValue(index) }
+                                            className={ index === value ? 'active' : '' }
                                         >
                                             {index + 1}
                                         </button>
@@ -30,13 +34,10 @@ export function Technology() {
                             }
                         </ul>
                         <div className="text">
-                            <h3> The terminology </h3>
-                            <h1> {name} </h1>
-                            <p> {description} </p>
+                            <h3 className={`${style['text-present-4']} subtitle`} > The terminology </h3>
+                            <h1 className={style['text-present-3']} > {name} </h1>
+                            <p className={style['text-present-9']} > {description} </p>
                         </div>
-                    </div>
-                    <div className="img_technology">
-                            <img src={images.portrait} alt={name} />
                     </div>
                 </div>
             </div>
