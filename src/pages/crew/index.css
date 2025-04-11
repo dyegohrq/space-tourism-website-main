@@ -1,17 +1,170 @@
 #crew {
     background: url(../../assets/crew/background-crew-mobile.jpg) no-repeat center / cover;
     padding: 140px var(--padding-mobile) 0 var(--padding-mobile);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100vw;
+    height: 100vh;
 
-    .description {
-        h3 {
-            color: var(--white);
-            text-transform: uppercase;
-            margin-bottom: 24px;
-    
-            .number {
-                font-weight: bold;
-                margin-right: 24px;
+    .main_content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        height: 90%;
+
+        .description {
+            max-width: 327px;
+
+            h3 {
+                color: var(--white);
+                text-transform: uppercase;
+                margin-bottom: 24px;
+        
+                .number {
+                    font-weight: bold;
+                    margin-right: 24px;
+                    color: var(--gray-300);
+                }
             }
+
+            .description_crew {
+                padding: 40px 0;
+
+                .text {
+                    h1 {
+                        color: var(--white);
+                        text-transform: uppercase;
+                        margin-bottom: 24px;
+                    }
+    
+                    h3 {
+                        margin-bottom: 8px;
+                    }
+    
+                    p {
+                        color: var(--blue-300);
+                        margin-bottom: 24px;
+                    }
+                }
+
+                .nav_items {
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 16px;
+
+                    .nav_item {
+                        button {
+                            width: 15px;
+                            height: 15px;
+                            border-radius: 50%;
+                            border: none;
+                            transition: all ease-in-out .5s;
+
+                            &.white {
+                                background: var(--white);
+                            }
+
+                            &.gray {
+                                background: #7e7e7e;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .img_crew img {
+            width: 271px;
+            height: 340px;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    #crew {
+        text-align: left;
+        align-items: flex-start;
+        padding-top: 120px;
+        background: url(../../assets/crew/background-crew-tablet.jpg) no-repeat top / cover;
+
+        .main_content {
+            
+            .description {
+                max-width: 100%;
+
+                .description_crew {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    text-align: center;
+
+                    .text {
+                        p {
+                            max-width: 512px;
+                        }
+                    }
+                }
+            }
+
+            .img_crew img {
+                width: 345px;
+                height: 400px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    #crew {
+        background: url(../../assets/crew/background-crew-desktop.jpg) no-repeat bottom / cover;
+        .main_content {
+            flex-direction: row;
+            max-width: 1110px;
+            margin: auto;
+
+            .description {
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+                .description_crew {
+                    height: 80%;
+                    justify-content: space-between;
+                    align-items: flex-start;
+                    text-align: left;
+
+                    .nav_items {
+                        justify-content: flex-start;
+                        gap: 40px;
+                    }
+                }
+            }
+
+            .img_crew {
+                
+                img {
+                    width: 540px;
+                    height: 676px;
+                }
+            }            
+        }
+    }
+}
+
+@media screen and (min-width: 1600px) {
+    #crew {
+        .main_content {
+            max-width: 1350px;
+            height: 80%;
         }
     }
 }

@@ -3,6 +3,7 @@ import { Home } from "./pages/Home";
 import { Layout } from "./components/Layout";
 import { Destination } from "./pages/destination";
 import { Crew } from "./pages/crew";
+import { Technology } from "./pages/technology";
 
 const route = createBrowserRouter([
     {
@@ -19,6 +20,10 @@ const route = createBrowserRouter([
             {
                 path: '/crew',
                 element: <Crew/>
+            }, 
+            {
+                path: '/technology',
+                element: <Technology/>
             }
         ]
     }

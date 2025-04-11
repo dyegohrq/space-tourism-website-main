@@ -15,9 +15,11 @@ export function Crew() {
                 <div className="description">
                     <h3 className={ style['text-present-6'] }><span className="number">02</span> Meet your crew</h3>
                     <div className="description_crew">
-                        <h3 className={`${style['text-present-4']} title_role`}> {role} </h3>
-                        <h1  > {name} </h1>
-                        <p> {bio} </p>
+                        <div className="text">
+                            <h3 className={`${style['text-present-4']} title_role`}> {role} </h3>
+                            <h1 className={`${style['text-present-3']}`} > {name} </h1>
+                            <p> {bio} </p>
+                        </div>
 
                         <ul className="nav_items">
                             {
@@ -25,6 +27,7 @@ export function Crew() {
                                     <li className="nav_item" key={item.name}>
                                         <button
                                             onClick={ () => setValue(index) }
+                                            className={`${ index === value ? 'white' : 'gray' } `}
                                         >
 
                                         </button>

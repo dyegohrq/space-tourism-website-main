@@ -17,6 +17,7 @@
             .number {
                 font-weight: bold;
                 margin-right: 24px;
+                color: var(--gray-300);
             }
         }
     
